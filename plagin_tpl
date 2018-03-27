@@ -1,0 +1,6 @@
+include($modx->config['base_path'].'assets/plugins/filedsyncher/FieldSyncher.php');
+
+$patern = '[*offer_type*] [*room_type*]';
+
+$value = FieldSyncher::init($modx, $patern);
+FieldSyncher::saveTV('content', 'menutitle', $value);
